@@ -70,7 +70,6 @@ A powerful Android application for creating, sharing, and managing custom glyph 
 }
 ```
 
-
 ### **Privacy & Terms**
 - **Website**: [GlyphMuseumWeb](https://github.com/pauwma/GlyphMuseumWeb) - Official website and legal documents
 - [Privacy Policy](https://pauwma.github.io/GlyphMuseumWeb/privacy)
@@ -95,3 +94,4 @@ A powerful Android application for creating, sharing, and managing custom glyph 
 ---
 
 **Made with ❤️ for the Nothing Phone community**
+
