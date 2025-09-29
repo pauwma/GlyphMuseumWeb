@@ -203,7 +203,7 @@ These Terms, together with our Privacy Policy, constitute the entire agreement b
 
 If you have questions about these Terms, please contact us:
 
-**Email:** contact+glyphmuseum@proton.me
+**Email:** contact+glyphmuseum@pauwma.com
 **Subject Line:** Terms of Service Inquiry
 
 For urgent legal matters, please include "Legal Notice" in the subject line.

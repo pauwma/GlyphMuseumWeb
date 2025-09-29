@@ -18,7 +18,7 @@ This Privacy Policy describes how Glyph Museum App ("we," "our," or "us") collec
 ## 2. Data Controller Information
 
 **Developer:** pauwma (Pau Muñoz)
-**Contact Email:** contact+glyphmuseum@proton.me
+**Contact Email:** contact+glyphmuseum@pauwma.com
 **Jurisdiction:** Spain, European Union
 
 ## 3. What Information We Collect
@@ -102,7 +102,7 @@ As an EU resident, you have the right to:
 - **Object:** Object to processing based on legitimate interests
 - **Withdraw Consent:** For data processed based on consent
 
-To exercise these rights, contact us at: contact+glyphmuseum@proton.me
+To exercise these rights, contact us at: contact+glyphmuseum@pauwma.com
 
 ## 9. Data Retention
 
@@ -114,7 +114,7 @@ To exercise these rights, contact us at: contact+glyphmuseum@proton.me
 
 ## 10. Children's Privacy
 
-The App is designed for users aged 13 and older. We do not knowingly collect personal information from children under 13. If we discover we have collected information from a child under 13, we will delete it immediately. Parents who believe their child has provided information to us should contact us at: contact+glyphmuseum@proton.me
+The App is designed for users aged 13 and older. We do not knowingly collect personal information from children under 13. If we discover we have collected information from a child under 13, we will delete it immediately. Parents who believe their child has provided information to us should contact us at: contact+glyphmuseum@pauwma.com
 
 ## 11. International Data Transfers
 
@@ -140,7 +140,7 @@ We may update this Privacy Policy from time to time. When we make changes:
 
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
-**Email:** contact+glyphmuseum@proton.me
+**Email:** contact+glyphmuseum@pauwma.com
 **Subject Line:** Privacy Policy Inquiry
 
 For GDPR-related requests, please include "GDPR Request" in the subject line and specify which right you wish to exercise.
