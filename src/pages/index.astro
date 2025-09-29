@@ -1,0 +1,131 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="Glyph Museum - Create & Share Custom Glyph Patterns for Nothing Phone">
+  <section class="home">
+    <div class="home-content">
+      <div class="home-logo">
+        <img src="/GlyphMuseumWeb/logo.svg" alt="Glyph Museum Logo" />
+      </div>
+
+      <h1 class="home-title">Glyph Museum</h1>
+
+      <p class="home-description">
+        Design custom glyph patterns for your Nothing Phone and discover unique creations from the community. Express yourself through the matrix.
+      </p>
+
+      <nav class="home-links">
+        <a href="/GlyphMuseumWeb/privacy" class="home-link">Privacy</a>
+        <span class="separator">-</span>
+        <a href="/GlyphMuseumWeb/terms" class="home-link">Terms</a>
+      </nav>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .home {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .home-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .home-logo {
+    margin-bottom: var(--space-xl);
+  }
+
+  .home-logo img {
+    width: clamp(120px, 20vw, 160px);
+    height: auto;
+    opacity: 0.95;
+    transition: all var(--transition-normal);
+  }
+
+  .home-logo img:hover {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  .home-title {
+    font-family: var(--font-nothing);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: normal;
+    color: var(--nothing-white);
+    margin-bottom: var(--space-xl);
+    letter-spacing: -0.02em;
+  }
+
+  .home-description {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.7;
+    color: var(--on-surface-dark);
+    margin-bottom: var(--space-2xl);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    font-family: var(--font-mono);
+    flex-wrap: wrap;
+  }
+
+  .home-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    background: var(--nothing-red);
+    color: var(--nothing-white);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 50px;
+    transition: all var(--transition-fast);
+    min-height: 36px;
+    min-width: 80px;
+  }
+
+  .home-link:hover {
+    background: var(--nothing-white);
+    color: var(--nothing-black);
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+
+  .separator {
+    display: none;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    .home {
+      padding: var(--space-md);
+    }
+
+    .home-links {
+      gap: var(--space-sm);
+    }
+
+    .home-link {
+      font-size: 0.875rem;
+      padding: var(--space-xs) var(--space-md);
+      min-height: 32px;
+      min-width: 70px;
+    }
+  }
+</style>

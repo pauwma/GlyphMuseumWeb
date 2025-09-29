@@ -1,0 +1,244 @@
+---
+// Header component for Glyph Museum website
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.replace('/GlyphMuseumApp', '').replace(/\/$/, '') || '/';
+
+const navigation = [
+  { name: 'Home', href: '/GlyphMuseumWeb/', current: currentPath === '/' },
+  { name: 'Privacy', href: '/GlyphMuseumWeb/privacy', current: currentPath === '/privacy' },
+  { name: 'Terms', href: '/GlyphMuseumWeb/terms', current: currentPath === '/terms' },
+];
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-brand">
+        <a href="/GlyphMuseumWeb/" class="brand-link" aria-label="Glyph Museum - Home">
+          <div class="brand-icon">
+            <img src="/GlyphMuseumWeb/logo.svg" alt="Glyph Museum Logo" width="32" height="32" />
+          </div>
+          <span class="brand-text">Museum</span>
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <ul class="nav-list" role="list">
+          {navigation.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class={`nav-link ${item.current ? 'nav-link-current' : ''}`}
+                aria-current={item.current ? 'page' : undefined}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <a
+          href="mailto:contact+glyphmuseum@proton.me"
+          class="contact-btn"
+          title="Contact us"
+        >
+          Contact
+        </a>
+      </div>
+
+      <!-- Mobile menu button (future enhancement) -->
+      <button
+        type="button"
+        class="mobile-menu-button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle menu"
+        style="display: none;"
+      >
+        <span class="mobile-menu-icon"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--outline-dark);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
+  }
+
+  .nav-brand {
+    flex-shrink: 0;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--nothing-white);
+    text-decoration: none;
+    font-family: var(--font-nothing);
+    font-size: 1.25rem;
+    font-weight: normal;
+    transition: color var(--transition-fast);
+    min-height: 40px;
+  }
+
+  .brand-link:hover {
+    color: var(--nothing-red);
+    opacity: 1;
+  }
+
+  .brand-icon {
+    display: flex;
+    align-items: center;
+    transition: transform var(--transition-fast);
+  }
+
+  .brand-icon img {
+    filter: brightness(0) invert(1);
+    transition: filter var(--transition-fast);
+  }
+
+  .brand-link:hover .brand-icon {
+    transform: scale(1.05);
+  }
+
+  .brand-link:hover .brand-icon img {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(-5deg);
+  }
+
+  .brand-text {
+    font-weight: normal;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    list-style: none;
+  }
+
+  .nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--on-surface-dark);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--nothing-white);
+    background: var(--surface-variant);
+    opacity: 1;
+  }
+
+  .nav-link-current {
+    color: var(--nothing-red);
+    background: rgba(255, 0, 0, 0.1);
+  }
+
+  .nav-link-current:hover {
+    color: var(--nothing-red);
+    background: rgba(255, 0, 0, 0.15);
+  }
+
+  .nav-actions {
+    flex-shrink: 0;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--nothing-red);
+    color: var(--nothing-white);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all var(--transition-fast);
+    min-height: 32px;
+  }
+
+  .contact-btn:hover {
+    background: var(--nothing-white);
+    color: var(--nothing-black);
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--nothing-white);
+    cursor: pointer;
+    padding: var(--space-sm);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .nav {
+      height: 3.5rem;
+      gap: var(--space-md);
+    }
+
+    .brand-text {
+      display: none;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .contact-btn {
+      padding: var(--space-xs) var(--space-md);
+      font-size: 0.8125rem;
+      min-height: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav {
+      gap: var(--space-sm);
+    }
+
+    .brand-link {
+      font-size: 1.125rem;
+    }
+
+    .nav-actions .btn {
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 0.75rem;
+    }
+  }
+</style>
